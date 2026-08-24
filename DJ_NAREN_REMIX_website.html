@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ NAREN REMIX</title>
+<meta name="description" content="DJ NAREN REMIX - Official Music Website">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#090909;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.94);backdrop-filter:blur(10px);border-bottom:1px solid #242424}
+.nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo span{color:#ff2b2b}
+nav a{margin-left:20px;color:#ccc;font-size:14px}
+nav a:hover{color:#fff}
+.hero{min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;background:radial-gradient(circle at center,#3b1010 0,#160808 35%,#090909 70%)}
+.hero h1{font-size:clamp(44px,9vw,88px);font-weight:1000;letter-spacing:-3px}
+.hero h1 span{color:#ff2525}
+.hero p{color:#bbb;margin:15px 0 28px;font-size:18px}
+.btn{display:inline-block;padding:13px 22px;border-radius:30px;background:#ff2525;color:#fff;font-weight:700;margin:5px;border:0;cursor:pointer}
+.btn.alt{background:#1d1d1d;border:1px solid #383838}
+section{max-width:1100px;margin:auto;padding:70px 20px}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:34px}
+.title p{color:#888;margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#151515;border:1px solid #282828;border-radius:18px;overflow:hidden}
+.cover{height:210px;background:linear-gradient(135deg,#450000,#111);display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:900}
+.card-body{padding:18px}
+.card h3{font-size:19px}
+.card p{color:#888;font-size:14px;margin:5px 0 14px}
+.actions{display:flex;gap:8px}
+.actions button,.actions a{flex:1;text-align:center;padding:10px;border-radius:10px;background:#252525;border:1px solid #333;color:#fff;cursor:pointer;font-size:13px}
+.actions .play{background:#ff2525;border-color:#ff2525}
+.about{background:#111;border-radius:22px;border:1px solid #292929}
+.about p{max-width:750px;margin:auto;text-align:center;color:#bbb}
+.social{text-align:center}
+.social a{display:inline-block;margin:7px;padding:11px 17px;background:#171717;border:1px solid #303030;border-radius:25px;color:#ddd}
+.contact{text-align:center}
+footer{border-top:1px solid #242424;text-align:center;padding:30px 20px;color:#777;font-size:13px}
+#player{position:fixed;bottom:0;left:0;right:0;background:#151515;border-top:1px solid #333;padding:12px 18px;display:none;z-index:20}
+#player strong{display:block;margin-bottom:7px}
+audio{width:100%;max-width:700px}
+@media(max-width:650px){nav{display:none}.hero{min-height:500px}section{padding:50px 16px}.cover{height:180px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">DJ <span>NAREN REMIX</span></div>
+    <nav>
+      <a href="#home">Home</a><a href="#songs">Songs</a><a href="#albums">Albums</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div style="color:#ff2525;font-weight:800;letter-spacing:3px">OFFICIAL MUSIC WEBSITE</div>
+    <h1>DJ NAREN <span>REMIX</span></h1>
+    <p>Latest Remixes • Music • Downloads</p>
+    <a class="btn" href="#songs">🎧 Listen Now</a>
+    <a class="btn alt" href="#contact">📩 Contact</a>
+  </div>
+</section>
+
+<section id="songs">
+  <div class="title"><h2>🎵 Latest Songs</h2><p>Your latest remixes will appear here</p></div>
+  <div class="cards">
+    <article class="card">
+      <div class="cover">DJ</div>
+      <div class="card-body">
+        <h3>My Latest Remix</h3><p>DJ NAREN REMIX</p>
+        <div class="actions">
+          <button class="play" onclick="playSong('My Latest Remix','songs/latest.mp3')">▶ Play</button>
+          <a href="songs/latest.mp3" download>⬇ Download</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cover">NR</div>
+      <div class="card-body">
+        <h3>New Remix Track</h3><p>DJ NAREN REMIX</p>
+        <div class="actions">
+          <button class="play" onclick="playSong('New Remix Track','songs/song2.mp3')">▶ Play</button>
+          <a href="songs/song2.mp3" download>⬇ Download</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="albums">
+  <div class="title"><h2>💿 Albums / Collections</h2><p>Add your remix collections here</p></div>
+  <div class="cards">
+    <div class="card"><div class="cover">ALBUM 01</div><div class="card-body"><h3>DJ NAREN Remix Collection</h3><p>2026 • Remix Collection</p></div></div>
+    <div class="card"><div class="cover">ALBUM 02</div><div class="card-body"><h3>Latest DJ Mixes</h3><p>2026 • DJ Mix</p></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about" style="padding:45px 25px">
+    <div class="title"><h2>👤 About DJ NAREN REMIX</h2></div>
+    <p>Welcome to the official website of DJ NAREN REMIX. Here you can listen to the latest remixes, explore music collections and download your favourite tracks.</p>
+  </div>
+</section>
+
+<section class="social">
+  <div class="title"><h2>🌐 Follow Me</h2></div>
+  <a href="#" target="_blank">YouTube</a>
+  <a href="#" target="_blank">Instagram</a>
+  <a href="#" target="_blank">Facebook</a>
+</section>
+
+<section id="contact" class="contact">
+  <div class="title"><h2>📞 Contact</h2><p>For music, remix or business enquiries</p></div>
+  <a class="btn" href="mailto:your@email.com">✉ Email Me</a>
+</section>
+</main>
+
+<div id="player">
+  <strong id="now">Now Playing</strong>
+  <audio id="audio" controls></audio>
+</div>
+
+<footer>© 2026 DJ NAREN REMIX • All Rights Reserved</footer>
+
+<script>
+function playSong(name,file){
+  const p=document.getElementById('player'), a=document.getElementById('audio');
+  document.getElementById('now').textContent='🎧 '+name;
+  a.src=file; p.style.display='block'; a.play().catch(()=>{});
+}
+</script>
+</body>
+</html>
